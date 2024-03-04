@@ -1,10 +1,11 @@
 const routes = {
     '/login': 'login.html',
     '/register': 'register.html',
-    '/': 'dashboard.html'
+    '/': 'dashboard.html',
+    '/game': 'game.html'
 };
 
-let isLoggedIn = false;
+let isLoggedIn = true;
 
 async function loadHtmlFile(path) {
     try {

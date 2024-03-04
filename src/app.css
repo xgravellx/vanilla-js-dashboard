@@ -1,0 +1,10 @@
+#wrapper {
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#wrapper-content {
+    display: flex;
+    height: 100vh;
+}
