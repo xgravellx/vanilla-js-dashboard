@@ -1,0 +1,1 @@
+- `npm run build` komutunu çalıştır ardından run etmek için `npm start` komutunu çalıştır
