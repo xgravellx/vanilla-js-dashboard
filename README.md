@@ -1,1 +1,8 @@
-- `npm run build` komutunu çalıştır ardından run etmek için `npm start` komutunu çalıştır
+### Bağımlılıkların yüklenmesi için
+- `npm install` ya da `npm i`
+
+### Build almak için
+- `npm run build`
+
+### Projeyi çalıştırmak içim
+- `npm start`
