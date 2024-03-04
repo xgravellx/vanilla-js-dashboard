@@ -7,6 +7,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: 'app.js',
+        publicPath: '/',
         sourceMapFilename: 'app.js.map'
     },
     devtool: 'source-map',
@@ -43,6 +44,18 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'src/index.html'
-        })
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'login.html',
+            template: 'src/pages/login.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'register.html',
+            template: 'src/pages/register.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'dashboard.html',
+            template: 'src/pages/dashboard.html'
+        }),
     ],
 };

@@ -1,31 +1,32 @@
 const routes = {
     '/login': 'login.html',
-    '/home': 'home.html'
+    '/register': 'register.html',
+    '/': 'dashboard.html'
 };
 
-// Kullanıcı oturum durumunu saklamak için basit bir değişken
 let isLoggedIn = false;
+
+async function loadHtmlFile(path) {
+    try {
+        const response = await fetch(`${routes[path]}`);
+        const html = await response.text();
+        const rootDiv = document.getElementById('app');
+        rootDiv.innerHTML = html;
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 function onRouteChange() {
     const pathName = window.location.pathname;
-    const rootDiv = document.getElementById('app');
 
-    if (pathName === '/home') {
-    // Burada kullanıcı oturum durumunu kontrol ediyoruz
-        if (isLoggedIn) {
-            // Eğer kullanıcı oturumu açıksa, home sayfasını yüklüyoruz
-            rootDiv.innerHTML = routes[pathName];
-        } else {
-            // Eğer kullanıcı oturumu kapalıysa, login sayfasına yönlendiriyoruz
-            window.history.pushState({}, pathName, '/login');
-            rootDiv.innerHTML = routes['/login'];
-        }
-    } else if (pathName === '/login') {
-    // Burada public route'ları yüklüyoruz
-        rootDiv.innerHTML = routes[pathName];
+    if (isLoggedIn && pathName === '/') {
+        loadHtmlFile(pathName);
+    } else if (!isLoggedIn && (pathName === '/login' || pathName === '/register')) {
+        loadHtmlFile(pathName);
     } else {
-    // Burada geçersiz bir yol için 404 sayfasını gösteriyoruz
-        rootDiv.innerHTML = '404 Not Found';
+        window.history.pushState({}, pathName, '/login');
+        loadHtmlFile('/login');
     }
 }
 

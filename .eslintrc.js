@@ -65,7 +65,7 @@ module.exports = {
         'array-callback-return': 'off',
         'newline-per-chained-call': 'off',
         'no-confusing-arrow': 'off',
-        'no-console': 'warn',
+        'no-console': 'off',
         'no-debugger': 'warn',
         'no-use-before-define': 'off',
         'object-curly-newline': ['error', {
