@@ -52,6 +52,7 @@ module.exports = {
         'linebreak-style': 'off',
         'operator-linebreak': ['error', 'after'],
         'no-param-reassign': 'off',
+        'no-unused-vars': 'off',
         'indent': [
             'error',
             4,

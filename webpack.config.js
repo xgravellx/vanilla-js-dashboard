@@ -26,9 +26,12 @@ module.exports = {
                 use: [ 'style-loader', 'css-loader' ]
             },
             {
-                test: /\.(png|svg|jpg|gif|ico)$/,
+                test: /\.(png|svg|jpg|gif|ico|jpeg)$/,
                 loader: 'file-loader',
-                options: { name: '[name].[ext]' }
+                options: {
+                    name: '[name]-[hash:8].[ext]',
+                    outputPath: 'assets'
+                }
             },
             {
                 test: /\.html$/i,
@@ -44,18 +47,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'src/index.html'
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'login.html',
-            template: 'src/pages/login.html'
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'register.html',
-            template: 'src/pages/register.html'
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'dashboard.html',
-            template: 'src/pages/dashboard.html'
-        }),
+        })
     ],
 };
