@@ -1,7 +1,7 @@
 import { Routes } from './routes/routes';
 
 const App = () => {
-    const isLogin = false;
+    const isLogin = true;
 
     Routes(isLogin);
 

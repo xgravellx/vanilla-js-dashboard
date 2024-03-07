@@ -17,6 +17,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.json$/,
+                type: 'asset/resource'
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: [ 'babel-loader', 'eslint-loader' ]
