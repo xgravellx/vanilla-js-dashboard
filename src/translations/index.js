@@ -1,6 +1,7 @@
 import trLanguage from './tr.js';
 import enLanguage from './en.js';
 
+// todo: localstorage a kaydet oradan değeri al
 let currentLanguage = 'TR';
 
 const translations = {
