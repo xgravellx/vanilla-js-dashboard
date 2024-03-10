@@ -1,7 +1,18 @@
-import TR from '../translations/tr.json';
-import EN from '../translations/en.json';
+import trLanguage from './tr.js';
+import enLanguage from './en.js';
+
+let currentLanguage = 'TR';
 
 const translations = {
-    TR,
-    EN
+    TR: trLanguage,
+    EN: enLanguage
+};
+
+export const setLanguage = (lang) => {
+    currentLanguage = lang;
+};
+
+export const translate = (key) => {
+    const translationObject = translations[currentLanguage];
+    return translationObject[key] || key;
 };

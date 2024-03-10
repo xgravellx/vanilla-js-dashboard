@@ -18,7 +18,7 @@ module.exports = {
         rules: [
             {
                 test: /\.json$/,
-                type: 'asset/resource'
+                type: 'asset/source',
             },
             {
                 test: /\.js$/,
@@ -27,7 +27,21 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                exclude: /src\/styles/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    require('autoprefixer')
+                                ]
+                            }
+                        }
+                    }
+                ]
             },
             {
                 test: /\.(png|svg|jpg|gif|ico|jpeg)$/,
@@ -35,6 +49,13 @@ module.exports = {
                 options: {
                     name: '[name]-[hash:8].[ext]',
                     outputPath: 'assets'
+                }
+            },
+            { // todo: gerekli değilse sil kontrol et!
+                test: /\.(woff(2)?|eot|ttf|otf)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext]'
                 }
             },
             {

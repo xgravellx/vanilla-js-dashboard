@@ -1,0 +1,12 @@
+.bg-custom-primary {
+    background-color: #000;
+}
+
+.bg-custom-secondary {
+    background-color: #202020;
+}
+
+.fa-globe {
+    font-size: 1em;
+    color: gray;
+}
