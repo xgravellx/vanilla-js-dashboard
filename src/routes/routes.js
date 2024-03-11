@@ -16,7 +16,7 @@ export const Routes = (isLogin) => {
         return;
     }
 
-    if (Component && isLogin) {
+    if (Component && isLogin && !PublicRouteList[path]) {
         const dashboardElement = Dashboard();
         appElement.appendChild(dashboardElement);
 
@@ -30,8 +30,9 @@ export const Routes = (isLogin) => {
             if (newComponent) {
                 pageMainElement.appendChild(newComponent());
             }
-
         });
+    } else if (Component && isLogin && PublicRouteList[path]) {
+        appElement.appendChild(Component());
     } else if (Component && !isLogin) {
         appElement.appendChild(Component());
     } else {
