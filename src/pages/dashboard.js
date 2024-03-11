@@ -1,5 +1,5 @@
 import '../styles/dashboard.css';
-import { setLanguage, translate } from '../translations';
+import { translate } from '../translations';
 
 import Profile from './profile';
 import Game from './game';
@@ -25,7 +25,7 @@ export default function Dashboard() {
                             <svg class="bi me-2" width="16" height="16">
                                 <use xlink:href="#home"></use>
                             </svg>
-                            Profile
+                            ${translate('profile')}
                         </a>
                     </li>
                     <li>
@@ -33,7 +33,7 @@ export default function Dashboard() {
                             <svg class="bi me-2" width="16" height="16">
                                 <use xlink:href="#speedometer2"></use>
                             </svg>
-                            Game
+                            ${translate('game')}
                         </a>
                     </li>
                     <li>
@@ -41,7 +41,7 @@ export default function Dashboard() {
                             <svg class="bi me-2" width="16" height="16">
                                 <use xlink:href="#table"></use>
                             </svg>
-                            Friends
+                            ${translate('friends')}
                         </a>
                     </li>
                 </ul>
@@ -59,8 +59,8 @@ export default function Dashboard() {
                                    <i class="fa-solid fa-globe"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="languageDropdown">
-                                <li id="languageTR" class="dropdown-item">Türkçe</li>
-                                <li id="languageEN" class="dropdown-item">İngilizce</li>
+                                <li id="languageTR" class="dropdown-item">${translate('turkish')}</li>
+                                <li id="languageEN" class="dropdown-item">${translate('english')}</li>
                             </ul>
                         </div>
                     </div>
@@ -72,11 +72,11 @@ export default function Dashboard() {
                                 <strong>Niran Kalyoncuoğlu</strong>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">${translate('settings')}</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                                <li><a class="dropdown-item" href="#">${translate('logout')}</a></li>
                             </ul>
                         </div>
                     </div>

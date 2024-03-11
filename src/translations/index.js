@@ -1,8 +1,15 @@
 import trLanguage from './tr.js';
 import enLanguage from './en.js';
 
-// todo: localstorage a kaydet oradan değeri al
 let currentLanguage = 'TR';
+let isInitialLoad = true;
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage) {
+        setLanguage(savedLanguage);
+    }
+});
 
 const translations = {
     TR: trLanguage,
@@ -11,6 +18,14 @@ const translations = {
 
 export const setLanguage = (lang) => {
     currentLanguage = lang;
+    localStorage.setItem('language', lang);
+
+    if (!isInitialLoad) {
+        location.reload();
+    } else {
+        isInitialLoad = false;
+    }
+
 };
 
 export const translate = (key) => {
