@@ -58,7 +58,7 @@ export default function Dashboard() {
                         </div>
                     </div>
                         <div class="dropdown">
-                            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle mx-2"
                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="https://github.com/mdo.png" alt="" width="40" height="40" class="rounded-circle me-2"
                                      style="margin-right: 10px;">
@@ -74,7 +74,7 @@ export default function Dashboard() {
                         </div>
                     </div>
                     <div id="page-title" class="px-2"></div>
-                    <div id="page-main"></div>
+                    <div id="page-main" class="mx-2"></div>
                 </div>
             </div>
         </div>
