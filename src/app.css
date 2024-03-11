@@ -10,3 +10,32 @@
     font-size: 1em;
     color: gray;
 }
+
+/* Border Custom */
+.border-custom-r {
+    border-right: 1px solid #383838;
+    padding-right: 1px;
+}
+
+.border-custom-lb {
+    border-bottom: 1px solid #383838;
+    border-left: 1px solid #383838;
+    padding-bottom: 1px;
+    padding-left: 1px;
+}
+
+/* Text Custom */
+.text-custom-light {
+    color: #fafafa;
+}
+
+.navbar-icon {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.navbar-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+

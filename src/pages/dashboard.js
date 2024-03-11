@@ -13,34 +13,27 @@ export default function Dashboard() {
     pageElement.innerHTML = `
         <div id="wrapper-content" class="d-flex vh-100 w-100">
             <!-- sidebar -->
-            <div class="d-flex flex-column flex-shrink-0 p-3 text-white vh-100 bg-custom-secondary" style="width: 280px;">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white vh-100 bg-custom-primary border-custom-r" style="width: 280px;">
                 <a href="/"
-                   class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <span class="fs-4">Ping Pong Game</span>
+                   class="d-flex align-items-center mb-1 me-md-auto text-white text-decoration-none">
+                    <span class="fs-4 p-3 mb-2">Ping Pong Game</span>
                 </a>
-                <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="/profile" class="nav-link text-white">
-                            <svg class="bi me-2" width="16" height="16">
-                                <use xlink:href="#home"></use>
-                            </svg>
+                        <a href="/profile" class="nav-link text-custom-light navbar-text">
+                            <i class="fa-solid fa-user text-secondary navbar-icon"></i>
                             ${translate('profile')}
                         </a>
                     </li>
                     <li>
-                        <a href="/game" class="nav-link text-white">
-                            <svg class="bi me-2" width="16" height="16">
-                                <use xlink:href="#speedometer2"></use>
-                            </svg>
+                        <a href="/game" class="nav-link text-custom-light navbar-text">
+                            <i class="fa-solid fa-gamepad text-secondary navbar-icon"></i>
                             ${translate('game')}
                         </a>
                     </li>
                     <li>
-                        <a href="/friends" class="nav-link text-white">
-                            <svg class="bi me-2" width="16" height="16">
-                                <use xlink:href="#table"></use>
-                            </svg>
+                        <a href="/friends" class="nav-link text-custom-light navbar-text">
+                            <i class="fa-solid fa-user-group text-secondary navbar-icon"></i>
                             ${translate('friends')}
                         </a>
                     </li>
@@ -51,7 +44,7 @@ export default function Dashboard() {
             <!-- content -->
             <div class="content vh-100 w-100 overflow-auto">
                 <div class="vh-100">
-                    <div id="page-header" class="d-flex justify-content-end mb-3 mb-md-0 me-md-auto bg-custom-secondary p-3">
+                    <div id="page-header" class="d-flex justify-content-end mb-3 mb-md-0 me-md-auto p-3 bg-custom-primary border-custom-lb">
                         <div class="d-flex align-items-center justify-content-center mx-3">
                         <div class="dropdown">
                             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
@@ -72,11 +65,11 @@ export default function Dashboard() {
                                 <strong>Niran Kalyoncuoğlu</strong>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                                <li><a class="dropdown-item" href="#">${translate('settings')}</a></li>
+                                <li><a class="dropdown-item" href="/">${translate('settings')}</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">${translate('logout')}</a></li>
+                                <li><a class="dropdown-item" href="/">${translate('logout')}</a></li>
                             </ul>
                         </div>
                     </div>
